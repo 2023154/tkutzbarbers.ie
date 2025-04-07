@@ -87,6 +87,7 @@ section {
 .about p {
     font-size: 1.1rem;
     margin: auto;
+    text-align: center;
 }
 
 /* Services */
@@ -269,6 +270,6 @@ section {
         font-size: 1.5rem;
     }
     .service-card img {
-        height: 60px;
+        /*height: 60px;*/
     }
 }
