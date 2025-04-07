@@ -143,11 +143,14 @@ section {
     color: #f4f4f4;
     font-weight: bold;
     font-size: 1.1rem;
-}.footer {
+}
+
+.footer {
      background-color: #111;
      color: #fff;
      text-align: center;
      padding: 40px 20px;
+    display: grid;
  }
 
 .footer-links {
@@ -173,10 +176,14 @@ section {
 .hours {
     background-color: #1a1a1a;
     padding: 3rem 1.5rem;
-    max-width: 800px;
-    margin: 2rem auto;
+    /*max-width: 800px;*/
+    /*margin: 2rem auto;*/
     border-radius: 12px;
     box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    /*display: grid;*/
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
 
 .hours h2 {
