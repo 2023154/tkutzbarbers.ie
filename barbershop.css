@@ -39,7 +39,7 @@ body {
     margin-bottom: 1.5rem;
 }
 
-.btn {
+.btn{
     background-color: #DC143C;
     color: white;
     padding: 12px 28px;
@@ -47,6 +47,14 @@ body {
     font-weight: bold;
     border-radius: 6px;
     transition: background-color 0.3s ease;
+}
+.price {
+    display: inline-block;
+    margin: 1rem 0;
+    background: #DC143C;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: bold;
 }
 
 .btn:hover {
