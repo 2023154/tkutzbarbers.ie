@@ -169,6 +169,39 @@ section {
     text-decoration: underline;
     color: #ffffff;
 }
+
+.hours {
+    background-color: #1a1a1a;
+    padding: 3rem 1.5rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.hours h2 {
+    text-align: center;
+    color: #DC143C;
+    margin-bottom: 2rem;
+}
+
+.hours-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    font-size: 1.1rem;
+}
+
+.hours-grid div {
+    background-color: #222;
+    padding: 1rem;
+    border-radius: 8px;
+    color: #f4f4f4;
+    border-left: 4px solid #DC143C;
+}
+
+
+
 @media (max-width: 1024px) {
     .hero h1 {
         font-size: 3rem;
@@ -180,6 +213,9 @@ section {
 
     .btn {
         padding: 10px 20px;
+    }
+    .service-card img {
+        /*height: 160px;*/
     }
 }
 
@@ -201,7 +237,7 @@ section {
     }
 
     .service-card img {
-        height: 160px;
+        /*height: 190px;*/
     }
 }
 
@@ -224,5 +260,8 @@ section {
 
     .booking h2 {
         font-size: 1.5rem;
+    }
+    .service-card img {
+        height: 60px;
     }
 }
