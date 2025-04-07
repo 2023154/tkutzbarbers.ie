@@ -162,3 +162,17 @@ section {
         gap: 10px;
     }
 }
+@media screen and (max-width: 480px) {
+    .footer-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .footer h2 {
+        font-size: 22px;
+    }
+
+    .footer p, .footer a {
+        font-size: 14px;
+    }
+}
