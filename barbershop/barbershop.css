@@ -14,27 +14,41 @@ body {
 
 /* Header */
 header {
-    background: url('barbershoImg.jpg') no-repeat center center/cover;
+    background: url('barbershop.jpg') no-repeat center center/cover;
     /*width: 764px;*/
     /*background: url('https://images.unsplash.com/photo-1611152347341-20b279c0a3a2?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;*/
     height: 306px;
-    color: #fff;
+    color: #DC143C;
+    border: #111111 10px solid;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+    /*text-shadow: 2px 2px 8px rgba(0,0,0,0.6);*/
     padding: 2rem;
+
 }
 
 header h1 {
     font-size: 4rem;
     letter-spacing: 1px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 8px;
+
+
 }
 
 header p {
     font-size: 1.5rem;
     margin-top: 1rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 8px;
 }
 
 /* Section styling */
