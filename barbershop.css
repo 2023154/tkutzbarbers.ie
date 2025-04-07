@@ -79,10 +79,14 @@ section {
     color: #DC143C;
     font-size: 2rem;
     margin-bottom: 1rem;
+    /*margin: auto;*/
+    text-align: center;
+
 }
 
 .about p {
     font-size: 1.1rem;
+    margin: auto;
 }
 
 /* Services */
