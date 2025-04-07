@@ -11,44 +11,46 @@ body {
     color: #f4f4f4;
     line-height: 1.6;
 }
-
-/* Header */
-header {
-    background: url('barbershop.jpg') no-repeat center center/cover;
-    /*width: 764px;*/
-    /*background: url('https://images.unsplash.com/photo-1611152347341-20b279c0a3a2?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;*/
-    height: 306px;
-    color: #DC143C;
-    border: #111111 10px solid;
+.hero {
+    height: 100vh;
+    background: url('redd.jpg') no-repeat center center/cover;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-
-    /*text-shadow: 2px 2px 8px rgba(0,0,0,0.6);*/
-    padding: 2rem;
-
+    justify-content: center;
+    position: relative;
+    text-align: center;
 }
 
-header h1 {
-    font-size: 4rem;
-    letter-spacing: 1px;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
-    border-radius: 8px;
-
-
+.hero .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 3rem;
+    border-radius: 12px;
 }
 
-header p {
-    font-size: 1.5rem;
-    margin-top: 1rem;
+.hero h1 {
+    font-size: 3.5rem;
+    color: #DC143C;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    background-color: #DC143C;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
-    border-radius: 8px;
+    padding: 12px 28px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #a30e2c;
 }
 
 /* Section styling */
@@ -120,7 +122,7 @@ section {
 
 .service-card h3 {
     margin: 1rem 0 0.5rem;
-    color: #e0ac1c;
+    color: #DC143C;
     font-size: 1.3rem;
 }
 
