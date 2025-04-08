@@ -82,6 +82,7 @@ section {
     /*margin: auto;*/
     text-align: center;
 
+
 }
 
 .about p {
@@ -150,8 +151,9 @@ section {
      background-color: #111;
      color: #fff;
      text-align: center;
-     padding: 40px 20px;
-    display: grid;
+     /*padding: 40px 20px;*/
+    /*display: grid;*/
+
  }
 
 .footer-links {
