@@ -1,44 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- ... existing code ... -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title data-lang="pageTitle">MOVE | Travel & Languages</title>
   <link rel="stylesheet" href="css/style.css">
-  <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </head>
 <body>
 <header class="main-header">
     <div class="logo">
         <img src="images/Logo Design for MOVE Initiative.png" alt="MOVE Logo">
     </div>
-    <nav>
-        <select id="language-switcher">
+    <nav class="site-nav">
+        <ul class="nav-links">
+            <li><a class="nav-link" href="#home"><i class="fa-solid fa-house"></i><span data-lang="navHome">Home</span></a></li>
+            <li><a class="nav-link" href="#about"><i class="fa-solid fa-earth-americas"></i><span data-lang="navAbout">About</span></a></li>
+            <li><a class="nav-link" href="#contact-form"><i class="fa-solid fa-envelope"></i><span data-lang="navContact">Contact</span></a></li>
+        </ul>
+        <select id="language-switcher" aria-label="Change language">
             <option value="en">English</option>
             <option value="pt">Português</option>
             <option value="es">Español</option>
         </select>
     </nav>
 </header>
-<header class="hero">
+<header class="hero" id="home">
   <div class="overlay">
   <h1 data-lang="heroTitle">MOVE & EXPLORE</h1>
   <p data-lang="heroSubtitle">Your journey to a new language and culture starts here.</p>
-    <a href="#courses" class="btn" data-lang="heroButton">EXPLORE COURSES</a>
+    <a href="#courses" class="btn"><i class="fa-solid fa-compass"></i> <span data-lang="heroButton">EXPLORE COURSES</span></a>
   </div>
 </header>
-<section class="about">
-  <h2 data-lang="aboutTitle">Change Your Life</h2>
+<section class="about" id="about">
+  <h2><i class="fa-solid fa-plane-departure"></i> <span data-lang="aboutTitle">Change Your Life</span></h2>
   <p data-lang="aboutText">Travel to change your life, come to learn a language. Discover new cultures, expand your horizons, and create unforgettable memories. The world is waiting for you.</p>
 </section>
 
 <!--SERVICES MENU-->
 <section id="courses" class="services">
-  <h2 data-lang="coursesTitle">Courses</h2>
+  <h2><i class="fa-solid fa-book-open"></i> <span data-lang="coursesTitle">Courses</span></h2>
   <div class="slider-container">
     <div class="services-grid">
     <div class="service-card">
       <a href="#">
         <img src="images/Serenidade e Escolha na Quietude.png" alt="English Course">
         <h3 data-lang="courseEnglish">English Course</h3>
+        <p class="course-desc" data-lang="courseEnglishDesc">Intensive English focused on conversation, vocabulary, and real-life situations to accelerate your fluency.</p>
         <p class="price" data-lang="courseEnglishPrice">€180</p>
       </a>
     </div>
@@ -47,6 +55,7 @@
       <a href="#">
         <img src="images/Serenidade e Escolha na Quietude.png" alt="Spanish Course">
         <h3 data-lang="courseSpanish">Spanish Course</h3>
+        <p class="course-desc" data-lang="courseComingSoon">New groups opening soon. Leave your contact and we’ll notify you.</p>
         <p class="price" data-lang="courseNotAvailable">Not Available</p>
       </a>
     </div>
@@ -55,6 +64,7 @@
       <a href="#">
         <img src="images/Serenidade e Escolha na Quietude.png" alt="German Course">
         <h3 data-lang="courseGerman">German Course</h3>
+        <p class="course-desc" data-lang="courseComingSoon">New groups opening soon. Leave your contact and we’ll notify you.</p>
         <p class="price" data-lang="courseNotAvailable2">Not Available</p>
       </a>
     </div>
@@ -62,6 +72,7 @@
       <a href="#">
         <img src="images/Serenidade e Escolha na Quietude.png" alt="French Course">
         <h3 data-lang="courseFrench">French Course</h3>
+        <p class="course-desc" data-lang="courseComingSoon">New groups opening soon. Leave your contact and we’ll notify you.</p>
         <p class="price" data-lang="courseNotAvailable3">Not Available</p>
       </a>
     </div>
@@ -69,6 +80,7 @@
       <a href="#">
         <img src="images/Serenidade e Escolha na Quietude.png" alt="Italian Course">
         <h3 data-lang="courseItalian">Italian Course</h3>
+        <p class="course-desc" data-lang="courseComingSoon">New groups opening soon. Leave your contact and we’ll notify you.</p>
         <p class="price" data-lang="courseNotAvailable4">Not Available</p>
       </a>
     </div>
@@ -76,7 +88,7 @@
   </div>
 </section>
 <section id="contact-form" class="contact-section">
-  <h2 data-lang="contactTitle">Contact Us</h2>
+  <h2><i class="fa-solid fa-envelope"></i> <span data-lang="contactTitle">Contact Us</span></h2>
   <form action="#" method="post">
     <div class="form-group">
       <label for="name" data-lang="formName">Name</label>
