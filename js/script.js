@@ -1,4 +1,5 @@
 const languageSwitcher = document.getElementById('language-switcher');
+const themeToggleBtn = document.getElementById('theme-toggle');
 
 const translations = {
     en: {
@@ -119,6 +120,32 @@ setLanguage(initialLang);
 
 // Slider functionality for courses on mobile
 document.addEventListener('DOMContentLoaded', () => {
+    // Theme setup
+    const getPreferredTheme = () => {
+        const stored = localStorage.getItem('theme');
+        if (stored === 'light' || stored === 'dark') return stored;
+        return window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    };
+
+    const applyTheme = (theme) => {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        if (themeToggleBtn) {
+            const i = themeToggleBtn.querySelector('i');
+            if (i) i.className = theme === 'light' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+            themeToggleBtn.setAttribute('aria-label', theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
+            themeToggleBtn.title = themeToggleBtn.getAttribute('aria-label');
+        }
+    };
+
+    applyTheme(getPreferredTheme());
+
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            const current = document.documentElement.getAttribute('data-theme') || 'dark';
+            applyTheme(current === 'dark' ? 'light' : 'dark');
+        });
+    }
     const slider = document.querySelector('.services-grid');
     if (!slider) return;
 
