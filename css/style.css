@@ -388,6 +388,16 @@ section {
     color: #4CAF50;
 }
 
+.bottom-nav .bottom-theme-btn {
+    background: none;
+    border: none;
+    color: var(--color-text);
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+}
+.bottom-nav .bottom-theme-btn i { font-size: 1.3rem; }
+.bottom-nav .bottom-theme-btn:hover i { color: #4CAF50; }
+
 /* Theme toggle button */
 .icon-btn {
     background: transparent;

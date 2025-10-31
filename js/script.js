@@ -1,5 +1,6 @@
 const languageSwitcher = document.getElementById('language-switcher');
 const themeToggleBtn = document.getElementById('theme-toggle');
+const themeToggleBottomBtn = document.getElementById('theme-toggle-bottom');
 
 const translations = {
     en: {
@@ -121,20 +122,32 @@ setLanguage(initialLang);
 // Slider functionality for courses on mobile
 document.addEventListener('DOMContentLoaded', () => {
     // Theme setup
+    const storage = {
+        get(key) { try { return window.localStorage.getItem(key); } catch { return null; } },
+        set(key, val) { try { window.localStorage.setItem(key, val); } catch { /* ignore */ } }
+    };
+
     const getPreferredTheme = () => {
-        const stored = localStorage.getItem('theme');
+        const stored = storage.get('theme');
         if (stored === 'light' || stored === 'dark') return stored;
-        return window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        return (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
     };
 
     const applyTheme = (theme) => {
         document.documentElement.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
+        storage.set('theme', theme);
+        const label = theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode';
         if (themeToggleBtn) {
             const i = themeToggleBtn.querySelector('i');
-            if (i) i.className = theme === 'light' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
-            themeToggleBtn.setAttribute('aria-label', theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
-            themeToggleBtn.title = themeToggleBtn.getAttribute('aria-label');
+            if (i) i.className = 'fa-solid fa-circle-half-stroke';
+            themeToggleBtn.setAttribute('aria-label', label);
+            themeToggleBtn.title = label;
+        }
+        if (themeToggleBottomBtn) {
+            const i2 = themeToggleBottomBtn.querySelector('i');
+            if (i2) i2.className = 'fa-solid fa-circle-half-stroke';
+            themeToggleBottomBtn.setAttribute('aria-label', label);
+            themeToggleBottomBtn.title = label;
         }
     };
 
@@ -142,6 +155,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (themeToggleBtn) {
         themeToggleBtn.addEventListener('click', () => {
+            const current = document.documentElement.getAttribute('data-theme') || 'dark';
+            applyTheme(current === 'dark' ? 'light' : 'dark');
+        });
+    }
+    if (themeToggleBottomBtn) {
+        themeToggleBottomBtn.addEventListener('click', () => {
             const current = document.documentElement.getAttribute('data-theme') || 'dark';
             applyTheme(current === 'dark' ? 'light' : 'dark');
         });
