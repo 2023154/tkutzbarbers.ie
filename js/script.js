@@ -202,3 +202,40 @@ document.addEventListener('DOMContentLoaded', () => {
         initOrDisable();
         window.addEventListener('resize', () => { initOrDisable(); });
 });
+
+// Bottom nav active state (scroll spy)
+document.addEventListener('DOMContentLoaded', () => {
+    const bottomLinks = document.querySelectorAll('.bottom-nav a');
+    if (!bottomLinks.length) return;
+
+    const sections = ['home', 'about', 'contact-form']
+        .map(id => document.getElementById(id))
+        .filter(Boolean);
+
+    const setActive = () => {
+        // Use an offset to account for fixed header
+        const y = 120;
+        let current = 'home';
+        for (const sec of sections) {
+            const rect = sec.getBoundingClientRect();
+            if (rect.top <= y && rect.bottom >= y) {
+                current = sec.id;
+                break;
+            }
+        }
+        bottomLinks.forEach(a => {
+            const match = a.getAttribute('href') === `#${current}`;
+            a.classList.toggle('active', match);
+            a.setAttribute('aria-current', match ? 'page' : 'false');
+        });
+    };
+
+    setActive();
+    window.addEventListener('scroll', setActive, { passive: true });
+
+    // Also set active on click for immediate feedback
+    bottomLinks.forEach(a => a.addEventListener('click', () => {
+        bottomLinks.forEach(b => b.classList.remove('active'));
+        a.classList.add('active');
+    }));
+});

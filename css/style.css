@@ -6,7 +6,7 @@ html { scroll-behavior: smooth; }
     box-sizing: border-box;
 }
 
-:root { --header-height: 112px; }
+:root { --header-height: 112px; --bottom-nav-height: 64px; }
 
 body {
     font-family: 'Segoe UI', sans-serif;
@@ -323,8 +323,42 @@ section {
     width: 100%;
 }
 
+/* Bottom fixed navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: var(--bottom-nav-height);
+    background: #111;
+    border-top: 1px solid #333;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+}
+
+.bottom-nav a {
+    flex: 1;
+    text-align: center;
+    color: #ddd;
+    text-decoration: none;
+    padding: 0.5rem 0;
+}
+
+.bottom-nav a i {
+    font-size: 1.4rem;
+}
+
+.bottom-nav a.active i {
+    color: #4CAF50;
+}
+
 @media (max-width: 768px) {
     /* Slider on mobile: swipe horizontally */
+    /* Hide top nav links on mobile */
+    .nav-links { display: none; }
+
     .services-grid {
         display: flex !important;
         overflow-x: auto;
@@ -344,6 +378,12 @@ section {
         min-width: 85%;
         scroll-snap-align: center;
     }
+
+    /* Reserve space for bottom nav on mobile */
+    body { padding-bottom: var(--bottom-nav-height); }
+
+    /* Show bottom nav only on mobile */
+    .bottom-nav { display: flex; }
 }
 
 @media (max-width: 1024px) {
