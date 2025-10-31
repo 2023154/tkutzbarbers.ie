@@ -1,96 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Open Graph Meta Tags -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" content="TKUTS-Barbers | Barbershop">
-  <meta property="og:description" content="Fresh fades, clean cuts – barbering at its finest in Ashbourne.">
-  <meta property="og:image" content="https://github.com/2023154/Tkuts-BarberShop-WebSite/blob/main/reddd.png?raw=true">
-  <meta property="og:url" content="https://2023154.github.io">
-  <meta name="twitter:card" content="summary_large_image">
-
-
-  <title>TKUTS-Barbers | Barbershop</title>
-  <link rel="stylesheet" href="barbershop.css">
+  <!-- ... existing code ... -->
+  <title data-lang="pageTitle">MOVE | Travel & Languages</title>
+  <link rel="stylesheet" href="css/style.css">
   <head>
 <body>
+<header class="main-header">
+    <div class="logo">
+        <img src="images/Logo Design for MOVE Initiative.png" alt="MOVE Logo">
+    </div>
+    <nav>
+        <select id="language-switcher">
+            <option value="en">English</option>
+            <option value="pt">Português</option>
+            <option value="es">Español</option>
+        </select>
+    </nav>
+</header>
 <header class="hero">
   <div class="overlay">
-  <h1>TKUTS-BARBERS</h1>
-  <p>Sharp fades. Hot towels. <br>Real style.</p>
-    <a href="#booking" class="btn">WALK IN</a>
+  <h1 data-lang="heroTitle">MOVE & EXPLORE</h1>
+  <p data-lang="heroSubtitle">Your journey to a new language and culture starts here.</p>
+    <a href="#courses" class="btn" data-lang="heroButton">EXPLORE COURSES</a>
   </div>
 </header>
 <section class="about">
-  <h2>About Us</h2>
-  <p>TKUTS Barbers is a top-tier barbershop located in Ashbourne, Co. Meath. Our team of 7 skilled barbers offers premium hair services in a clean, relaxed environment.</p>
+  <h2 data-lang="aboutTitle">Change Your Life</h2>
+  <p data-lang="aboutText">Travel to change your life, come to learn a language. Discover new cultures, expand your horizons, and create unforgettable memories. The world is waiting for you.</p>
 </section>
 
 <!--SERVICES MENU-->
-<section class="services">
-  <h2>Services & Prices</h2>
-  <div class="services-grid">
+<section id="courses" class="services">
+  <h2 data-lang="coursesTitle">Courses</h2>
+  <div class="slider-container">
+    <div class="services-grid">
     <div class="service-card">
-      <img src="beardd.png" alt="Skin Fade">
-      <h3>NORMAL HAIRCUT</h3>
-      <p class="price">€18</p>
+      <a href="#">
+        <img src="images/Serenidade e Escolha na Quietude.png" alt="English Course">
+        <h3 data-lang="courseEnglish">English Course</h3>
+        <p class="price" data-lang="courseEnglishPrice">€180</p>
+      </a>
     </div>
 
-    <div class="service-card">
-      <img src="skinFade.png" alt="Skin Fade">
-      <h3>SKIN FADE</h3>
-      <p class="price">€22</p>
+    <div class="service-card unavailable">
+      <a href="#">
+        <img src="images/Serenidade e Escolha na Quietude.png" alt="Spanish Course">
+        <h3 data-lang="courseSpanish">Spanish Course</h3>
+        <p class="price" data-lang="courseNotAvailable">Not Available</p>
+      </a>
     </div>
 
-    <div class="service-card">
-      <img src="beard.png" alt="Beard Trim">
-      <h3>BEARD TRIM</h3>
-      <p class="price">€12</p>
+    <div class="service-card unavailable">
+      <a href="#">
+        <img src="images/Serenidade e Escolha na Quietude.png" alt="German Course">
+        <h3 data-lang="courseGerman">German Course</h3>
+        <p class="price" data-lang="courseNotAvailable2">Not Available</p>
+      </a>
     </div>
-    <div class="service-card">
-      <img src="hotTowel.jpg" alt="Hot Towel Shave">
-      <h3>HOT TOWEL SHAVE</h3>
-      <p class="price">€30</p>
+    <div class="service-card unavailable">
+      <a href="#">
+        <img src="images/Serenidade e Escolha na Quietude.png" alt="French Course">
+        <h3 data-lang="courseFrench">French Course</h3>
+        <p class="price" data-lang="courseNotAvailable3">Not Available</p>
+      </a>
     </div>
-    <div class="service-card">
-      <img src="waxEar.webp" alt="Waxing">
-      <h3>EAR & NOSE WAXING</h3>
-      <p class="price">€12</p>
+    <div class="service-card unavailable">
+      <a href="#">
+        <img src="images/Serenidade e Escolha na Quietude.png" alt="Italian Course">
+        <h3 data-lang="courseItalian">Italian Course</h3>
+        <p class="price" data-lang="courseNotAvailable4">Not Available</p>
+      </a>
+    </div>
     </div>
   </div>
 </section>
-<section class="hours">
-  <h2>Opening Hours</h2>
-  <div class="hours-grid">
-    <div><strong>Monday:</strong> 10:00 – 19:00</div>
-    <div><strong>Tuesday:</strong> 10:00 – 19:00</div>
-    <div><strong>Wednesday:</strong> 10:00 – 19:00</div>
-    <div><strong>Thursday:</strong> 10:00 – 19:00</div>
-    <div><strong>Friday:</strong> 10:00 – 19:00</div>
-    <div><strong>Saturday:</strong> 09:00 – 18:00</div>
-    <div><strong>Sunday:</strong> 10:00 - 17:00</div>
-  </div>
+<section id="contact-form" class="contact-section">
+  <h2 data-lang="contactTitle">Contact Us</h2>
+  <form action="#" method="post">
+    <div class="form-group">
+      <label for="name" data-lang="formName">Name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email" data-lang="formEmail">Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="message" data-lang="formMessage">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="btn" data-lang="formButton">Send Message</button>
+  </form>
 </section>
 
 
 
 <footer class="footer">
   <section class="contact">
-    <h2>Visit Us</h2>
-    <p>📍 Ireland 4 Bachelors Walk, Ashbourne, Co. Meath</p>
-    <p>📞 +353 1 962 9686</p>
-
+    <h2 data-lang="footerTitle">Follow Us</h2>
     <div class="footer-links">
       <p>💻 <a href="https://github.com/2023154" target="_blank">GitHub</a></p>
       <p>📘 <a href="https://www.facebook.com/forbarbering" target="_blank">Facebook</a></p>
       <p>📸 <a href="https://www.instagram.com" target="_blank">Instagram</a></p>
-      <p>✂️ <a href="#join-us">Join Our Team</a></p>
     </div>
   </section>
 </footer>
 
-
+<script src="js/script.js"></script>
 
 </body>
 </html>

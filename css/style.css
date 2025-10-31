@@ -10,10 +10,12 @@ body {
     background-color: #111;
     color: #f4f4f4;
     line-height: 1.6;
+    padding-top: 70px; /* Adjust for fixed header */
 }
+
 .hero {
     height: 100vh;
-    background: url('reddd.png') no-repeat center center/cover;
+    background: url('../images/Focused Study in Minimalist Café.png') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,7 +31,7 @@ body {
 
 .hero h1 {
     font-size: 3.5rem;
-    color: #DC143C;
+    color: #4CAF50;
     margin-bottom: 0.5rem;
 }
 
@@ -40,7 +42,7 @@ body {
 }
 
 .btn{
-    background-color: #DC143C;
+    background-color: #4CAF50;
     color: white;
     padding: 12px 28px;
     text-decoration: none;
@@ -51,14 +53,14 @@ body {
 .price {
     display: inline-block;
     margin: 1rem 0;
-    background: #DC143C;
+    background: #388E3C;
     padding: 6px 12px;
     border-radius: 4px;
     font-weight: bold;
 }
 
 .btn:hover {
-    background-color: #a30e2c;
+    background-color: #45a049;
 }
 
 /* Section styling */
@@ -75,14 +77,12 @@ section {
 /* About Section */
 .about h2,
 .services h2,
+.contact-section h2,
 .contact h2 {
-    color: #DC143C;
+    color: #4CAF50;
     font-size: 2rem;
     margin-bottom: 1rem;
-    /*margin: auto;*/
     text-align: center;
-
-
 }
 
 .about p {
@@ -136,7 +136,7 @@ section {
 
 .service-card h3 {
     margin: 1rem 0 0.5rem;
-    color: #DC143C;
+    color: #66BB6A;
     font-size: 1.3rem;
 }
 
@@ -144,6 +144,51 @@ section {
     margin-bottom: 1rem;
     color: #f4f4f4;
     font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.service-card.unavailable {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.service-card.unavailable a {
+    pointer-events: none;
+}
+
+/* Contact Form */
+.contact-section {
+    background-color: #1a1a1a;
+    padding: 3rem 1.5rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.contact-section .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-section label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #f4f4f4;
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #333;
+    border: 1px solid #555;
+    border-radius: 5px;
+    color: #f4f4f4;
+}
+
+.contact-section .btn {
+    width: 100%;
+    padding: 1rem;
     font-size: 1.1rem;
 }
 
@@ -191,7 +236,7 @@ section {
 
 .hours h2 {
     text-align: center;
-    color: #DC143C;
+    color: #28a745;
     margin-bottom: 2rem;
 }
 
@@ -207,10 +252,73 @@ section {
     padding: 1rem;
     border-radius: 8px;
     color: #f4f4f4;
-    border-left: 4px solid #DC143C;
+    border-left: 4px solid #28a745;
 }
 
+/* Header */
+.main-header {
+    background-color: #111;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
 
+.main-header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.main-header .logo img {
+    height: 50px;
+}
+
+.main-header nav select {
+    background-color: #333;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.service-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Slider for Courses */
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* For Firefox */
+    }
+
+    .services-grid::-webkit-scrollbar {
+        display: none; /* For Chrome, Safari, and Opera */
+    }
+
+    .service-card {
+        flex: 0 0 80%;
+        scroll-snap-align: center;
+        margin-right: 1rem;
+    }
+}
 
 @media (max-width: 1024px) {
     .hero h1 {
