@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Sell more icon">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2e7d32"/>
+      <stop offset="100%" stop-color="#43a047"/>
+    </linearGradient>
+    <filter id="s">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#g)"/>
+  <!-- bars -->
+  <g fill="#fff" filter="url(#s)">
+    <rect x="250" y="360" width="60" height="120" rx="8"/>
+    <rect x="350" y="300" width="60" height="180" rx="8"/>
+    <rect x="450" y="240" width="60" height="240" rx="8"/>
+  </g>
+  <!-- arrow up -->
+  <g fill="#fff" filter="url(#s)">
+    <polygon points="540,230 580,260 540,290 540,270 500,270 420,320 340,340 260,360 260,330 336,320 416,300 496,250 540,250"/>
+  </g>
+  <!-- currency -->
+  <circle cx="620" cy="180" r="36" fill="#fff" filter="url(#s)"/>
+  <text x="620" y="190" text-anchor="middle" font-family="Segoe UI, Arial" font-size="30" fill="#2e7d32" font-weight="700">€</text>
+</svg>
